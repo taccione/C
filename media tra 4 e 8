@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+   int N, num;
+   int totale = 0;
+   int conteggio = 0;
+
+   printf("Inserisci il numero di numeri da inserire: ");
+   scanf("%d", &N);
+
+   for (int i = 0; i < N; i++) {
+       printf("Inserisci un numero intero: ");
+       scanf("%d", &num);
+
+       if (num >= 4 && num <= 8) {
+           totale += num;
+           conteggio++;
+       }
+   }
+
+   if (conteggio > 0) {
+       float media = (float)totale / conteggio;
+       printf("La media dei numeri compresi tra 4 e 8 (estremi inclusi) è: %.2f\n", media);
+   } else {
+       printf("Nessun numero compreso tra 4 e 8 è stato inserito.\n");
+   }
+
+   return 0;
+}
