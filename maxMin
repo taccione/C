@@ -1,0 +1,34 @@
+//Diego Renesto
+//5 Dicembre 2023
+/*Dopo aver inserito N numeri interi, 
+con N scelto dall'utente determinare il
+numero massimo e minimo inseriti
+*/
+
+#include <stdio.h>
+int main()
+{
+   int N, num, max, min;
+   do{
+        printf("Quanti numeri vuoi inserire?\n ");
+        scanf("%d", &N);
+    while(N < 0);
+    for (int i = 0; i < N; i++) {
+      printf("Inserisci il %d° numero intero: ", i+1);
+      scanf("%d", &num);
+
+    if (num > max) {
+         max = num;
+      }
+
+    if (num < min) {
+         min = num;
+      }
+   }
+
+    printf("Il numero massimo inserito è: %d\n", max);
+    printf("Il numero minimo inserito è: %d\n", min);
+
+    return 0;
+
+}
