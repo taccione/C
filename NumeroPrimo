@@ -1,0 +1,47 @@
+//Diego Renesto
+//12 Dicembre 2023
+/*Scrivi il codice sorgente di un prg che 
+_permetta all'utente di inserire n numeri primi e
+_calcoli la somma dei N numeri primi somma
+*/
+
+#include <stdio.h>
+#include <stdbool.h>
+
+bool primo(int num) {
+    int lim = num/2;
+    bool nPrimo = true;
+
+    for(int i = 2; i <= lim && nPrimo; i++)
+        if(num % i == 0)
+            nPrimo = false;
+
+    return nPrimo;
+}
+
+int main() {
+    int n;
+    int num = 2;
+    int nPrimi = 0;
+    int somma = 0;
+    bool nPrimo;
+
+    printf("Digita il numero dei primi numeri primi che vuoi visualizzare: ");
+    scanf("%d", &n);
+    printf("I primi %d numeri primi sono: ", n);
+
+    while(nPrimi < n)
+    {
+        nPrimo = primo(num);
+        if (nPrimo)
+        {
+            printf("%d ", num);
+            nPrimi++;
+            somma = somma + num;
+        }
+        num++;
+    }
+    printf("\n La somma è: %d", somma);
+
+    return 0;
+}
