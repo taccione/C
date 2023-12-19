@@ -1,0 +1,48 @@
+#include <stdio.h>
+int main(){
+    //Dichiarazione delle variabili
+    int n;
+    int num;
+    int sommaPositivi = 0;
+    int sommaNegativi = 0;
+    int contPositivi = 0;
+    int contNegativi = 0;
+    float mediaPositivi;
+    float mediaNegativi;
+
+    printf("Quanti numeri vuoi visualizzare? ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        printf("Inserire il %d° numero: ", i);
+        scanf("%d", &num);
+        
+        if (num >= 0) {
+            sommaPositivi += num;
+            contPositivi++;
+        } else {
+            sommaNegativi += -num;
+            contNegativi++;
+        }
+    }
+    
+    if (contPositivi > 0) {
+        mediaPositivi = (float)sommaPositivi / contPositivi;
+    } 
+    
+    if (contNegativi > 0) {
+        mediaNegativi = (float)sommaNegativi / contNegativi;
+    } 
+    
+    printf("La somma dei numeri positivi è: %d\n", sommaPositivi);
+    printf("La somma dei numeri negativi in valore assoluto è: %d\n", sommaNegativi);
+    
+    printf("Il conteggio dei numeri positivi è: %d\n", contPositivi);
+    printf("Il conteggio dei numeri negativi è: %d\n", contNegativi);
+    
+    printf("La media dei numeri positivi è: %.2f\n", mediaPositivi);
+    printf("La media dei numeri negativi è: %.2f\n", mediaNegativi);
+    
+  
+    return 0;
+}
