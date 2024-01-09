@@ -13,13 +13,16 @@ int main(){
     printf("Quanti numeri vuoi visualizzare? ");
     scanf("%d", &n);
 
+    //inizio ciclo for per inserire n numeri 
     for (int i = 1; i <= n; i++) {
         printf("Inserire il %d° numero: ", i);
         scanf("%d", &num);
-        
+
+        //controllo che il numero sia positivo 
         if (num >= 0) {
             sommaPositivi += num;
             contPositivi++;
+        //il numero è negativo
         } else {
             sommaNegativi += -num;
             contNegativi++;
@@ -33,7 +36,8 @@ int main(){
     if (contNegativi > 0) {
         mediaNegativi = (float)sommaNegativi / contNegativi;
     } 
-    
+
+    //stampa somma, conteggio e media dei numeri positivi e negativi
     printf("La somma dei numeri positivi è: %d\n", sommaPositivi);
     printf("La somma dei numeri negativi in valore assoluto è: %d\n", sommaNegativi);
     
