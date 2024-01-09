@@ -5,11 +5,12 @@ int main(){
     int sconto;
     int prezzoNetto;
     //char risposta;
-    
+ 
     //do{
         printf("Inserire la somma di denaro: ");
     scanf("%d", &costo);
-        
+
+    //pongo a condizione l'ammonto del prezzo
     if (costo <= 500) {
         sconto = costo * 0.1 ;
     } else if (costo <= 1000) {
@@ -19,15 +20,18 @@ int main(){
     }
         
     prezzoNetto = costo - sconto;
-        
+
+    //stampo sconto e prezzo netto
     printf("Lo sconto applicato è: %d\n", sconto);
     printf("Il prezzo netto è: %d\n", prezzoNetto);
     
     /*
+    //ripetizione del ciclo
     printf("Vuoi inserire altro denaro?(S/N):");
     scanf("%c", &risposta);
 
     }while(risposta == 'S');
+    //fine ciclo 
     */
         
     return 0;
