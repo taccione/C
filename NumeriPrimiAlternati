@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main() {
+    int num, x = 1, somma = 0, contatore = 0;
+    printf("Inserisci il numero di primi da stampare: ");
+    scanf("%d", &num);
+
+    while (num <= 0) {
+        printf("Il numero inserito non può essere negativo o nullo.\nReinserire: ");
+        scanf("%d", &num);
+    }
+
+    while (num > 0) {
+        int primo = 1;
+        x = x + 1;
+        
+        for (int i = 2; i < x; i++) {
+            if (x % i == 0) {
+                primo = 0;
+                i = x;
+            }
+        }
+
+        if (primo) {
+          if (contatore % 2 == 0) {
+               printf("%d\n", x);
+               num--;
+               somma = somma + x;
+            }
+         contatore++;
+        }
+    }
+
+    printf("La somma e': %d", somma);
+    return 0;
+}
