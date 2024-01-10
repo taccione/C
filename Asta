@@ -1,0 +1,50 @@
+//Diego Renesto
+//10 Gennaio 2024
+/*Simulare un’asta in cui ci siano due compratori che si contendono l’acquisto di un oggetto, a turno i
+due compratori dovranno fare un’offerta per l’oggetto da comprare, l’asta termina quando uno dei
+due compratori si ritira offrendo ‘0’, a quel punto l’altro compratore si sarà aggiudicato l’asta.
+Stampare quale compratore si è aggiudicato l’asta, con che cifra e quante offerte sono state
+effettuate durante l’asta.
+*/
+#include <stdio.h>
+int main() {
+    
+    //Dichiarazione delle variabili
+    int compratore1 = 0;
+    int compratore2 = 0;
+    int offerte = 0;
+    int vincitore = 0;
+    int offerta;
+    
+    printf("Benvenuto all'asta!\n");
+    printf("Inserire le offerte dei due compratori:\n");
+    
+    while(1){
+        printf("Compratore 1: ");
+        scanf("%d", &offerta);
+        
+        if(offerta == 0) {
+            vincitore = 2;
+            break;
+        }
+        
+        compratore1 += offerta;
+        offerte++;
+        
+        printf("Compratore 2: ");
+        scanf("%d", &offerta);
+        
+        if(offerta == 0) {
+            vincitore = 1;
+            break;
+        }
+        compratore2 += offerta;
+        offerte++;
+    }
+    
+    printf("\nL'asta è terminata!");
+    printf("\nIl compratore %d si è aggiudicato l'asta con un'offerta di %d.", vincitore, (vincitore == 1) ? compratore1 : compratore2);
+    printf("\nSono state effettuate %d offerte.", offerte);
+    
+    return 0;
+}
