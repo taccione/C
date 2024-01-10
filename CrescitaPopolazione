@@ -1,0 +1,32 @@
+//Diego Renesto
+//10 Gennaio 2024
+/*Si supponga che l’andamento della popolazione di un’alga si sviluppi nel seguente modo: un anno
+raddoppia l’anno successivo cala di un terzo. Creare un programma che dato un valore iniziale della
+popolazione e un valore da raggiungere di popolazione dica quanti anni ci mette quella popolazione
+a raggiungere o superare quel valore.
+*/
+#include <stdio.h>
+int main() {
+    
+    //Dichiarazione delle variabili
+    int popolazioneIniziale;
+    int popolazioneFinale;
+    int anni=0;
+
+    //Popolazione iniziale
+    printf("Inserire la popolazione iniziale: ");
+    scanf("%d", &popolazioneIniziale);
+
+    //Popolazione da raggiungere
+    printf("Inserire la popolazione da raggiungere: ");
+    scanf("%d", &popolazioneFinale);
+
+    while(popolazioneIniziale < popolazioneFinale){
+        anni++;
+        popolazioneIniziale *= 2;
+        popolazioneIniziale -= (popolazioneIniziale/3);
+    }
+    printf("Sono necessari %d anni per raggiungere o superare la popolazione di %d\n", anni, popolazioneFinale);
+
+    return 0;
+}
