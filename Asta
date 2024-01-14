@@ -10,8 +10,8 @@ effettuate durante l’asta.
 int main() {
     
     //Dichiarazione delle variabili
-    int compratore1;
-    int compratore2;
+    int compratore1 = 0;
+    int compratore2 = 0;
     int offerte = 0;
     int vincitore = 0;
     int offerta;
@@ -28,7 +28,7 @@ int main() {
             break;
         }
         
-        compratore1 += offerta;
+        compratore1 = offerta;
         offerte++;
         
         printf("Compratore 2: ");
@@ -38,7 +38,7 @@ int main() {
             vincitore = 1;
             break;
         }
-        compratore2 += offerta;
+        compratore2 = offerta;
         offerte++;
     }
     
