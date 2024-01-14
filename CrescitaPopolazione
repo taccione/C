@@ -24,9 +24,11 @@ int main() {
     while(popolazioneIniziale < popolazioneFinale){
         anni++;
         popolazioneIniziale *= 2;
-        popolazioneIniziale -= (popolazioneIniziale/3);
+        if(popolazioneIniziale < popolazioneFinale){
+            anni++;
+            popolazioneIniziale -= (popolazioneIniziale/3);
+        }
     }
     printf("Sono necessari %d anni per raggiungere o superare la popolazione di %d\n", anni, popolazioneFinale);
 
-    return 0;
 }
