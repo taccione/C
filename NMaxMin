@@ -13,15 +13,9 @@ int main() {
     printf("Inserisci il numero di elementi: ");
     scanf("%d", &N);
     
-    //faccio inserire num per assegnare il valore a min e max
-    printf("Inserisci il 1° numero: ");
-    scanf("%d", &num);
-
-    min = num;
-    max = num;
 
     //faccio partire i da 2 poichè il primo numero è gia stato inserito
-    for (int i = 2; i <= N; i++) {
+    for (int i = 1; i <= N; i++) {
         printf("Inserisci il %d° numero: ", i);
         scanf("%d", &num);
 
