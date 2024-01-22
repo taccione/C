@@ -13,8 +13,6 @@ int main() {
     printf("Inserisci il numero di elementi: ");
     scanf("%d", &N);
     
-
-    //faccio partire i da 2 poichè il primo numero è gia stato inserito
     for (int i = 1; i <= N; i++) {
         printf("Inserisci il %d° numero: ", i);
         scanf("%d", &num);
