@@ -24,10 +24,10 @@ int main() {
         if (num > max) {
             max = num;
         }
-    }//end for
-    
+    }
+    //end for
 
-    printf("Il minimo e' %d\n", min);
     printf("Il massimo e' %d\n", max);
-
+    printf("Il minimo e' %d\n", min);
+    
 }
