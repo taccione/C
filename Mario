@@ -1,0 +1,46 @@
+//Diego Renesto
+//23 Gennaio 2024
+/*Mario è uno studente che ha una
+quantità di soldi stabilita dall’utente, ogni giorno Mario all’intervallo può
+acquistare al bar della scuola una pastina che costa 1 euro o un panino che
+costa 1,5 euro. Il programma continua a chiedere all’utente cosa mangerà Mario
+quel giorno finché ha abbastanza soldi o non ha la possibilità di soddisfare il
+suo appetito con quello che vuole. Al termine del programma scrivere in output
+il numero di giorni in cui Mario ha mangiato e quante volte ha mangiato una
+pastina e quante un panino.
+*/
+#include <stdio.h>
+int main()
+{
+    int cash;
+    int pastine = 0;
+    int panini = 0;
+    int giorni = 0;
+
+    printf("Inserisci la quantità di soldi che Mario ha: ");
+    scanf("%d", &cash);
+
+    while (cash >= 1) {
+        char scelta;
+        
+        printf("Cosa mangia oggi Mario? Inserisci '1' per una pastina e '2' per un panino: ");
+        scanf(" %c", &scelta);
+
+        if (scelta == '1' && cash >= 1) {
+            cash -= 1;
+            pastine++;
+            giorni++;
+        } else if (scelta == '2' && cash >= 1.5) {
+            cash -= 1.5;
+            panini++;
+            giorni++;
+        } else {
+            break;
+        }
+    }
+
+    printf("Mario ha mangiato per %d giorni.\n", giorni);
+    printf("Ha mangiato %d pastine e %d panini.\n", pastine, panini);
+
+    return 0;
+}
