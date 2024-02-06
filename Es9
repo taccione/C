@@ -1,0 +1,49 @@
+//Diego Renesto
+//6 Febbraio 2024
+#include <stdio.h>
+int main(){
+    //Dichiarazione delle variabili
+    int giorno, mese, anno, giornoMax, meseMax, annoMax, giornoMin, meseMin, annoMin, cont = 0, scelta;
+    float prezzo, somma = 0, media, prezzoMax = 0, prezzoMin = 99999, sommaCompresa = 0, mediaCompresa;
+    
+    do {
+        printf("Inserisci la data di acquisto (giorno mese anno): ");
+        scanf("%d %d %d", &giorno, &mese, &anno);
+        
+        printf("Inserisci il prezzo dell'azione: ");
+        scanf("%f", &prezzo);
+        
+        somma += prezzo;
+        cont++;
+        
+        if (prezzo > prezzoMax) {
+            prezzoMax = prezzo;
+            giornoMax = giorno;
+            meseMax = mese;
+            annoMax = anno;
+        }
+        
+        if (prezzo < prezzoMin) {
+            prezzoMin = prezzo;
+            giornoMin = giorno;
+            meseMin = mese;
+            annoMin = anno;
+        }
+        
+        
+        
+        printf("Vuoi inserire un'altra azione? (1 = si, 0 = no): ");
+        scanf("%d", &scelta);
+        
+    } while (scelta == 1);
+
+    media = somma / cont;
+    
+    printf("1) Somma dei prezzi delle azioni: %f\n", somma);
+    printf("2) Media dei prezzi delle azioni: %f\n", media);
+    printf("3) Data di acquisto e valore dell'azione con prezzo massimo: %d/%d/%d - %f\n", giornoMax, meseMax, annoMax, prezzoMax);
+    printf("4) Data di acquisto e valore dell'azione con prezzo minimo: %d/%d/%d - %f\n", giornoMin, meseMin, annoMin, prezzoMin);
+    
+    
+    
+}
