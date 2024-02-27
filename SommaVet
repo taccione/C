@@ -1,0 +1,33 @@
+//Diego Renesto
+//27 Febbraio 2024
+/*Dopo aver dichiarato un vettore
+leggere in input gli elementi e sommarli visualizzando il risultato
+*/
+#include <stdio.h>
+int main(){
+    //Dichiarazione delle variabili
+    int lunghezza;
+    int somma = 0;
+    int vettore[lunghezza];
+
+    do{
+        printf("Inserisci la lunghezza del vettore: ");
+        scanf("%d", &lunghezza);
+    }while(lunghezza > 0);
+
+    //Popolamento del vettore
+    for(int i = 0; i < lunghezza; i++){
+        printf("Elemento %d del vettore", i + 1);
+        scanf("%d", &vettore[i]);
+    }
+
+    //Calcolo della somma
+    for(int i = 0; i < lunghezza; i++){
+        somma += vettore[i];
+    }
+
+    //Visualizzazione della somma
+    printf("La somma è : %d\n", somma);
+
+    return 0;
+}
