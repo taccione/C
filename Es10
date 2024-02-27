@@ -1,0 +1,79 @@
+// Diego Renesto
+// 27 Febbraio 2024
+// Esercizio 10
+#include <stdio.h>
+int main(){
+    // Dichiarazione delle variabili
+    int lunghezza, numeri;
+    int somma = 0, sommaPari = 0, sommaDispari = 0;
+    int nPari, nDispari, contPari, contDispari;
+    int vettore[lunghezza];
+    int i;
+
+    do{
+        printf("Inserisci la lunghezza del vettore: ");
+        scanf("%d", &lunghezza);
+    }while(lunghezza > 0);
+
+    // Popolamento del vettore
+    for (i = 0; i < lunghezza; i++) {
+        do {
+            printf("Inserisci la lunghezza del vettore maggiore di zero: ");
+            scanf("%d", &lunghezza);
+        } while (lunghezza <= 0);
+        
+        numeri = lunghezza;
+        
+        somma += lunghezza;
+        
+        if (lunghezza % 2 == 0) {
+            nPari = lunghezza;
+            sommaPari += lunghezza;
+            contPari++;
+        } else {
+            nDispari = lunghezza;
+            sommaDispari += lunghezza;
+            contDispari++;
+        }
+    }
+    
+    // Calcolo della media dei numeri inseriti
+    float media = (float) somma / vettore[lunghezza];
+    printf("La media dei numeri inseriti è: %f\n", media);
+    
+    // Calcolo della media dei numeri pari inseriti
+    float mediaPari = (float) sommaPari / contPari;
+    printf("La media dei numeri pari inseriti è: %f\n", mediaPari);
+    
+    // Calcolo della media dei numeri dispari inseriti
+    float mediaDispari = (float) sommaDispari / contDispari;
+    printf("La media dei numeri dispari inseriti è: %f\n", mediaDispari);
+    
+    // Calcolo del massimo e del minimo dei numeri pari inseriti
+    int max_pari = nPari, min_pari = nPari;
+    for (int i = 1; i < contPari; i++) {
+        if (nPari > max_pari) {
+            max_pari = nPari;
+        }
+        if (nPari < min_pari) {
+            min_pari = nPari;
+        }
+    }
+    printf("Il massimo numero pari inserito è: %d\n", max_pari);
+    printf("Il minimo numero pari inserito è: %d\n", min_pari);
+    
+    // Calcolo del massimo e del minimo dei numeri dispari inseriti
+    int maxDispari = nDispari, minDispari = nDispari;
+    for (int i = 1; i < contDispari; i++) {
+        if (nDispari > maxDispari) {
+            maxDispari = nDispari;
+        }
+        if (nDispari < minDispari) {
+            minDispari = nDispari;
+        }
+    }
+    printf("Il massimo numero dispari inserito è: %d\n", maxDispari);
+    printf("Il minimo numero dispari inserito è: %d\n", minDispari);
+    
+    return 0;
+}
