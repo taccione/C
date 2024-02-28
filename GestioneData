@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class GestioneData {
+    public static void main(String[] args) {
+        Scanner tastiera = new Scanner(System.in);
+
+        // Dichiarazione delle variabili
+        int data;
+
+        // Inserimento della sequenza di caratteri
+            System.out.println("Inserisci una sequenza di 8 caratteri");
+            data = tastiera.nextInt();
+
+        // Controllo se la data ha 7 o 8 cifre || è positiva
+        while (!ControlData(data) || data < 0) {
+            System.out.println("Inserisci una data valida!");
+            data = tastiera.nextInt();
+        }
+
+        while (!DataOk(data)){
+            System.out.println("Inserisci una data valida!");
+            data = tastiera.nextInt();
+        }
+    }
+
+    // Metodo per il controllo delle cifre della data
+    public static boolean ControlData(int data) {
+        int cifre = 0;
+        int resto;
+        do {
+            resto = data % 10;
+            data = data / 10;
+            if (resto != 0) {
+                cifre++;
+            }
+        } while (resto != 0);
+        return cifre == 7 || cifre == 8;
+    }
+
+    // Metodo per il controllo semantico della data
+    public static boolean DataOk(int data){
+        int giorno = data / 1000000 ;
+        int mese = (data % 1000000) / 10000;
+        int anno = data / 10000;
+        return giorno > 0 && giorno < 32 && mese > 0 && mese < 13 && anno > 0;
+    }
+
+    // Metodo per la scomposizione della data
+    public static void PatternData(int data) {
+
+    }
+}
