@@ -1,0 +1,39 @@
+// Diego Renesto
+// 5 Marzo 2024
+/*Dopo aver caricato in memoria un 2 vettori di uguale dimensione composti da numeri interi
+scrivere in output un terzo vettore dato dalla somma delle componenti fatta a una a una (Vettore
+somma)*/
+#include <stdio.h>
+int main(){
+    // Dichiarazione delle variabili
+    int n; // dimensione dei vettori
+
+    // Inserimento della lunghezza dei vettori
+    printf("Inserisci la dimensione dei vettori: ");
+    scanf("%d", &n);
+
+    int vettore1[n];
+    int vettore2[n];
+    int vettore3[n]; // vettore somma
+
+    // Popolamento dei vettori
+    for(int i = 0; i < n; i++){
+        printf("Inserisci il %d° elemento del primo vettore: ", i + 1);
+        scanf("%d", &vettore1[i]);
+        printf("Inserisci il %d° elemento del secondo vettore: ",i + 1);
+        scanf("%d", &vettore2[i]);
+    }
+
+    // Popolamento del vettore somma
+    for(int i = 0; i < n; i++){
+        vettore3[i] = vettore1[i] + vettore2[i];
+        printf("Vettore somma: \n");
+    }
+
+    // Stampa del vettore somma
+    for(int i = 0; i < n; i++){
+    printf("%d ", vettore3[i]);
+    }
+
+
+}
