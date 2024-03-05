@@ -1,0 +1,47 @@
+// Diego Renesto
+// 5 Marzo 2024
+/*Scrivere un programma in c che dopo aver inserito un vettore di N numeri interi separi il vettore
+inserito in 2 ulteriori vettori il primo contenente i numeri pari ed il secondo con i numeri dispari*/
+#include <stdio.h>
+int main(){
+    // Dichiarazione delle variabili
+    int n; // dimensione del vettore
+
+    // Inserimento della lunghezza del vettore
+    printf("Inserisci la dimensione del vettore: ");
+    scanf("%d", &n);
+
+    int vettore[n];
+    int vettore2[n]; // vettore pari
+    int vettore3[n]; // vettore dispari
+    int contPari = 0; // conteggio pari
+    int contDispari = 0; // conteggio dispari
+
+    for(int i = 0; i < n; i++) {
+        printf("Inserisci il %d° numero del vettore: ", i + 1);
+        scanf("%d", &vettore[i]);
+
+        if(vettore[i] % 2 == 0) {
+            vettore2[contPari] = vettore[i];
+            contPari++;
+        } else {
+            vettore2[contDispari] = vettore[i];
+            contDispari++;
+        }
+    }
+
+    // Stampa del vettore pari
+    printf("\nNumeri pari: ");
+    for(int i = 0; i < contPari; i++) {
+        printf("%d ", vettore2[i]);
+    }
+
+    // Stampa del vettore dispari
+    printf("\nNumeri dispari: ");
+    for(int i = 0; i < contDispari; i++) {
+        printf("%d ", vettore3[i]);
+    }
+
+    
+
+}
