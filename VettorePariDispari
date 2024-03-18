@@ -25,7 +25,7 @@ int main(){
             vettore2[contPari] = vettore[i];
             contPari++;
         } else {
-            vettore2[contDispari] = vettore[i];
+            vettore3[contDispari] = vettore[i];
             contDispari++;
         }
     }
