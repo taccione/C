@@ -1,6 +1,6 @@
 // Diego Renesto
 // 31 Marzo 2024
-// Scrivere un programma che dopo aver lettp una stringa conti quante vocali contiene
+// Scrivere un programma che dopo aver letto una stringa conti quante vocali e consonanti contiene
 #include <stdio.h>
 #include <string.h>
 int main(){
@@ -12,7 +12,7 @@ int main(){
     scanf("%s", str);
     lung = strlen(str);
     printf("La lunghezza della stringa risulta essere: %d\n", lung);
-    // Conteggio vocali
+    // Conteggio vocali e consonanti
     for(i = 0; i < lung; i++){
         if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
             voc++;
@@ -21,6 +21,7 @@ int main(){
             cons++;
         }
     }
+    // Stampa conteggi
     printf("Le vocali presenti nella stringa sono: %d\n", voc);
     printf("Le consonanti presenti nella stringa sono: %d\n", cons);
 }
