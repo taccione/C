@@ -1,0 +1,28 @@
+// Diego Renesto
+// 31 Marzo 2024
+// Scrivere un programma che dopo aver lettp una stringa conti quante vocali contiene
+#include <stdio.h>
+#include <string.h>
+int main(){
+    // Dichiarazione delle variabili
+    int i = 0, voc = 0, cons = 0, lung = 0, posizione = 0;
+    char str[20];
+    int vet1[20];
+    int vet2[20];
+    // Inserimento della stringa
+    printf("Inserisci la stringa\n");
+    scanf("%s", str);
+    lung = strlen(str);
+    printf("La lunghezza della stringa risulta essere: %d\n", lung);
+    // Conteggio vocali
+    for(i = 0; i < lung; i++){
+        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
+            voc++;
+        }
+        else{
+            cons++;
+        }
+    }
+    printf("Le vocali presenti nella stringa sono: %d\n", voc);
+    printf("Le consonanti presenti nella stringa sono: %d\n", cons);
+}
