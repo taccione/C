@@ -50,17 +50,17 @@ int main(){
     printf("La media dei numeri dispari inseriti è: %f\n", mediaDispari);
     
     // Calcolo del massimo e del minimo dei numeri pari inseriti
-    int max_pari = nPari, min_pari = nPari;
+    int maxPari = nPari, minPari = nPari;
     for (int i = 1; i < contPari; i++) {
-        if (nPari > max_pari) {
-            max_pari = nPari;
+        if (nPari > maxPari) {
+            maxPari = nPari;
         }
-        if (nPari < min_pari) {
+        if (nPari < minPari) {
             min_pari = nPari;
         }
     }
-    printf("Il massimo numero pari inserito è: %d\n", max_pari);
-    printf("Il minimo numero pari inserito è: %d\n", min_pari);
+    printf("Il massimo numero pari inserito è: %d\n", maxPari);
+    printf("Il minimo numero pari inserito è: %d\n", minPari);
     
     // Calcolo del massimo e del minimo dei numeri dispari inseriti
     int maxDispari = nDispari, minDispari = nDispari;
