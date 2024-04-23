@@ -1,0 +1,29 @@
+// Diego Renesto
+// 23 Aprile 2024
+// puntatori
+#include <stdio.h>
+int main(){
+    // Dichiarazione delle variabili
+    int numero = 8;
+    int* puntatore = &numero;
+
+    *puntatore *= 2;
+
+    printf("Valore della variabile raddoppiata: %d\n", numero);
+
+    printf("Inserisci un nuovo valore: ");
+    scanf("%d", &numero);
+    printf("Il nuovo valore inserito è: %d\n",numero);
+    
+    float array[] = {2.5, 3.7, 1.2, 5.9, 4.3};
+    float* puntatore2 = array;
+    float somma = 0;
+
+    for(int i = 0; i < 5; i++){
+        somma += *(puntatore2 + i);
+    }
+
+    printf("Somma degli elementi dell'array: %f", somma);
+
+    return 0;
+}
