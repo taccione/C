@@ -1,0 +1,35 @@
+// Diego Renesto
+// 23 Aprile 2024
+// Dopo aver letto un vettore di N elementi utilizzando i puntatori calcolare
+// la media del vettore e determinare il massimo ed il minimo.
+
+#include <stdio.h>
+int main(){
+    // Dichiarazione delle variabili
+    int N; // lunghezza dell'array
+    int* puntatore;
+    printf("Inserisci la dimensione dell'array:");
+    scanf("%d", &N);
+
+    int array[] = new int[N];
+    printf("Inserisci i valori del vettore:\n");
+    for(int i = 0; i < N;i++){
+        scanf("%d",puntatore;)
+    }
+
+    float somma = 0;
+    float media = 0;
+
+    for(int i = 0; i < 5; i++){
+        somma += *(puntatore2 + i);
+    }
+
+    printf("Somma degli elementi dell'array: %f", somma);
+
+    for(int i = 0; i < 5; i++){
+        media = somma/N;
+    }
+
+    printf("Media degli elementi dell'array: %f", media);
+
+}
