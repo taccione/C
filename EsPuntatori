@@ -4,32 +4,38 @@
 // la media del vettore e determinare il massimo ed il minimo.
 
 #include <stdio.h>
-int main(){
+int main() {
     // Dichiarazione delle variabili
-    int N; // lunghezza dell'array
-    int* puntatore;
-    printf("Inserisci la dimensione dell'array:");
+    int N; // lunghezza del vettore
+    printf("Inserisci la dimensione del vettore: ");
     scanf("%d", &N);
 
-    int array[] = new int[N];
-    printf("Inserisci i valori del vettore:\n");
-    for(int i = 0; i < N;i++){
-        scanf("%d",puntatore;)
+    int vettore[N];
+    printf("Inserisci gli elementi del vettore:\n");
+    for (int i = 0; i < N; i++) { // popolamento del vettore
+        scanf("%d", &vettore[i]);
     }
 
-    float somma = 0;
-    float media = 0;
-
-    for(int i = 0; i < 5; i++){
-        somma += *(puntatore2 + i);
+    double somma = 0;
+    float media;
+    int max, min;
+    
+    for (int i = 0; i < N; i++) { // calcolo la somma per trovare la media
+        somma += *(vettore + i); 
+    }
+    media = somma / N;
+    
+    for (int i = 0; i < N; i++) {
+        if (*(vettore + i) > max)
+            max = *(vettore + i);
+        if (*(vettore + i) < min)
+            min = *(vettore + i);
     }
 
-    printf("Somma degli elementi dell'array: %f", somma);
+    // stampa
+    printf("La media del vettore è: %.2f\n", media);
+    printf("Il massimo del vettore è: %d\n", max);
+    printf("Il minimo del vettore è: %d\n", min);
 
-    for(int i = 0; i < 5; i++){
-        media = somma/N;
-    }
-
-    printf("Media degli elementi dell'array: %f", media);
-
+    return 0;
 }
