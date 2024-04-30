@@ -1,0 +1,46 @@
+// Diego Renesto
+// 30 Aprile 2024
+// Dopo aver letto un vettore di N elementi utilizzando i puntatori determinare e visualizzare a video
+// i numeri pari e dispari inseriti calcolare inoltre la media dei numeri dispari inseriti.
+
+#include<stdio.h>
+int main() {
+    int N; // lunghezza del vettore
+    printf("Inserisci il numero di elementi del vettore: ");
+    scanf("%d", &N);
+
+    int vettore[N];
+    // lettura del vettore di N elementi
+    printf("Inserisci gli elementi del vettore: ");
+    for (int i = 0; i < N; i++) {
+    scanf("%d", &vettore[i]);
+    }
+
+    int *puntatore = vettore;
+    int sommaDis = 0;
+    int contDispari = 0; // contatore dei numeri dispari contenuti
+
+    printf("Numeri pari inseriti: ");
+    for (int i = 0; i < N; i++) {
+        if (*puntatore % 2 == 0) {
+            printf("%d ", *puntatore);
+        } else {
+            sommaDis += *puntatore;
+            contDispari++;
+        }
+        puntatore++;
+    }
+
+    float mediaDis = (float)sommaDis / contDispari;
+
+    printf("\nNumeri dispari inseriti: ");
+    for (int i = 0; i < N; i++) {
+        if (vettore[i] % 2 != 0) {
+            printf("%d ", vettore[i]);
+        }   
+    }
+
+    printf("\nMedia dei numeri dispari inseriti: %.2f\n", media_dispari);
+
+    return 0; 
+}
