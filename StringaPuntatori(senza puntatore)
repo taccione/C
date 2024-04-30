@@ -1,0 +1,28 @@
+// Diego Renesto
+// 30 Aprile 2024
+// Dopo aver letto una stringa e un carattere utilizzando i puntatori determinare e visualizzare a video 
+// quante volte si ripete il carattere all'interno della stringa.
+
+#include <stdio.h>
+int main() {
+    // Dichiarazione delle variabili
+    char stringa[100];
+    char carattere; // carattere da controllare all'interno della stringa
+    int cont = 0; // contatore del numero delle volte che carattere è presente nella stringa
+
+    printf("Inserisci una stringa: ");
+    scanf("%s", stringa);
+
+    printf("Inserisci un carattere: ");
+    scanf(" %c", &carattere);
+
+    for (int i = 0; stringa[i] < 100; i++) {
+        if (stringa[i] == carattere) {
+            cont++;
+        }
+    }
+
+    printf("Il carattere '%c' si ripete %d volte nella stringa.\n", carattere, cont);
+
+    return 0;
+}
