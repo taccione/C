@@ -5,6 +5,7 @@
 
 #include<stdio.h>
 int main() {
+    // Dichiarazione delle variabili
     int N; // lunghezza del vettore
     printf("Inserisci il numero di elementi del vettore: ");
     scanf("%d", &N);
