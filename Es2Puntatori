@@ -41,7 +41,7 @@ int main() {
         }   
     }
 
-    printf("\nMedia dei numeri dispari inseriti: %.2f\n", media_dispari);
+    printf("\nMedia dei numeri dispari inseriti: %.2f\n", mediaDispari);
 
     return 0; 
 }
