@@ -1,0 +1,42 @@
+// Diego Renesto
+// 27 maggio
+// Individua i primi X numeri in ordine crescente 
+#include <stdio.h>
+int main()
+{
+    // Dichiarazione delle variabili
+    int n; // dimensione vettore
+    printf("Inserisci la dimensione del vettore: ");
+    scanf("%d", &n);
+    
+    int vettore[n];
+    
+    printf("Inserisci gli elementi del vettore: ");
+    for (int i = 0; i < n; i++) {
+    scanf("%d", &vettore[i]);
+    }
+    
+    // Bubble sort
+    for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (vettore[j] > vettore[j + 1]) {
+                    int temp = vettore[j];
+                    vettore[j] = vettore[j + 1];
+                    vettore[j + 1] = temp;
+                }
+            }
+    }
+    
+    int primiNum;
+    printf("Quanti numeri vuoi visualizzare: ");
+    scanf("%d", &primiNum);
+    
+    if (primiNum <= n) {
+        for(int i = 0; i < primiNum; i++) {
+            printf("%d\n", vettore[i]);
+        }
+    }
+    
+
+    return 0;
+}
