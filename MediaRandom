@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+    // Dichiarazione delle variabili
+    int n;
+    int i = 0; 
+    int j;
+    printf("Inserisci la dimensione del vettore: ");
+    scanf("%d", &n);
+    int vettore[n];
+    for(int i = 0; i < n;i ++) {
+        vettore[i] = rand() % 100;
+    }
+    for(int i = 0; i < n; i++) {
+        printf("%d ", vettore[i]);
+    }
+    // ordinamento con bubble sort 
+    for(int i = 0; i < n-i; i++) {
+        for(int i = 0; i < n-i-1; i++) {
+            if(vettore[j] > vettore[j+1]) {
+                int temp = vettore[j];
+                vettore[j] = vettore[j+1];
+                vettore[j+1] = temp;
+            }
+        }
+    }
+    
+    printf("\n");
+    int n0;   
+    while(i<n-1 && vettore[i]!=vettore[i+1]) { // ricerca del primo valore duplicato
+                i++;
+                j=i;
+                }
+    while(i<n-1){
+        if(vettore[i]!=vettore[i+1]) {
+            j=j+1;
+            vettore[j]=vettore[i+1];
+            }
+                i++;
+                n0=j+1;
+                }
+    printf("Vettore senza duplicati: \n");             
+    for(j=0;j<n;j++) {
+        printf("%d ", vettore[j]);   
+    }
+    printf("\n");
+    
+    int n2; 
+    printf("Inserisci la dimensione del secondo vettore: ");
+    scanf("%d", &n2);
+    int vettore2[n2];
+    for(int i = 0; i < n2; i++) {
+        vettore2[i] = rand() % 100;
+    }
+    for(int i = 0; i < n2; i++) {
+        printf("%d ", vettore2[i]);
+    }
+    // ordinamento con bubble sort 
+    for(int i = 0; i < n2-i; i++) {
+        for(int i = 0; i < n2-i-1; i++) {
+            if(vettore2[j] > vettore2[j+1]) {
+                int temp2 = vettore2[j];
+                vettore2[j] = vettore2[j+1];
+                vettore2[j+1] = temp2;
+            }
+        }
+    }
+
+    int somma; 
+    float media;
+    for(i = 0; i < n; i++) {
+        somma += vettore[i];
+    }
+
+    media = (float)somma / n;
+    printf("\n");
+    printf("La media del primo vettore è %.2f\n", media);
+    
+    int somma2; 
+    float media2;
+    for(i = 0; i < n2; i++) {
+        somma2 += vettore2[i];
+    }
+
+    media2 = (float)somma2 / n2;
+    printf("La media del secondo vettore è %.2f\n", media2);
+
+    if(media > media2) {
+        printf("La media maggiore è: %.2f", media);
+    }
+    else if(media < media2) {
+        printf("La media maggiore è: %.2f", media2);
+    }
+
+    return 0;
+}
